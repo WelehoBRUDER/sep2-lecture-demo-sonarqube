@@ -1,8 +1,22 @@
+package calctest;
+
+import calculator.Calculator;
 import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayInputStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorTest {
+    @Test
+    void main() {
+        String[] args = {};
+        String mockData = "2\n2\n";
+        ByteArrayInputStream mockInput = new ByteArrayInputStream(mockData.getBytes());
+        System.setIn(mockInput);
+        Calculator.main(args);
+    }
+
     @Test
     void testAdd() {
         assertEquals(20.0, Calculator.addNumbers(5.0, 15.0));

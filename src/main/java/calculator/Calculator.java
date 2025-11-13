@@ -1,3 +1,5 @@
+package calculator;
+
 import java.util.Scanner;
 import java.util.logging.Logger;
 
@@ -9,25 +11,14 @@ public class Calculator {
         double num1 = sc.nextDouble();
         log.info("Enter the second number: ");
         double num2 = sc.nextDouble();
-
-        log.info("Select the operation: \n[1] Addition\n[2] Subtraction\n[3] Multiplication\n[4] Division");
-        int operation = sc.nextInt();
-
-        double result;
-
-        if (operation == 1) {
-            result = addNumbers(num1, num2);
-        } else if (operation == 2) {
-            result = subtractNumbers(num1, num2);
-        } else if (operation == 3) {
-            result = multiplyNumbers(num1, num2);
-        } else if (operation == 4) {
-            result = divideNumbers(num1, num2);
-        } else {
-            result = 0;
-        }
-
-        log.info(() -> "The result is: " + result);
+        double addition = addNumbers(num1, num2);
+        double subtraction = subtractNumbers(num1, num2);
+        double multiplication = multiplyNumbers(num1, num2);
+        double division = divideNumbers(num1, num2);
+        log.info(() -> "addition: " + addition);
+        log.info(() -> "subtraction: " + subtraction);
+        log.info(() -> "multiplication: " + multiplication);
+        log.info(() -> "division: " + division);
     }
 
     public static double addNumbers(double num1, double num2) {

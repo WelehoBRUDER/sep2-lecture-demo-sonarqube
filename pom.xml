@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>LectureDemo2Sep2</artifactId>
+    <artifactId>sep2-lecture-demo-sonarqube</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -22,7 +22,7 @@
     </dependencies>
 
     <build>
-        <finalName>LectureDemoCalc</finalName>
+        <finalName>sep2-lecture-demo-sonarqube</finalName>
         <plugins>
             <plugin>
                 <groupId>org.jacoco</groupId>
